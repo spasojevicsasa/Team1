@@ -34,9 +34,9 @@ export default class App extends React.Component{
             <div className="menu">
 
             </div>
-            
-            <div className="mainScreen">
 
+            <div className="mainScreen">
+            <div> </div>
             </div>
 
             </div>
