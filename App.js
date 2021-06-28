@@ -36,7 +36,7 @@ export default class App extends React.Component{
             </div>
             
             <div className="mainScreen">
-
+                <div> </div>
             </div>
 
             </div>
