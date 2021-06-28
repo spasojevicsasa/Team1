@@ -31,7 +31,13 @@ export default class App extends React.Component{
         return(
             <div>
                
-            <Drivers driver ={this.state.driver} />
+            <div className="menu">
+
+            </div>
+            
+            <div className="mainScreen">
+
+            </div>
 
             </div>
         );
