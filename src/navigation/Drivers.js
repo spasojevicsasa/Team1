@@ -1,20 +1,26 @@
 import React from "react";
 import * as $ from "jquery";
+import { timers } from "jquery";
 
 export default class Drivers extends React.Component {
     constructor() {
         super();
-       
+
         this.state = {
-            driversState: []
+            driversState: [],
+
         }
-        
-     }
+
+        this.driverDetails = this.driverDetails.bind(this);
+    }
+
+
+
 
     componentDidMount() {
         this.getPosts();
     }
-     
+
 
     // getPosts() {
     //     var url = "http://ergast.com/api/f1/2013/driverStandings.json";
@@ -28,20 +34,23 @@ export default class Drivers extends React.Component {
 
     // }
     getPosts() {
-            var url = "http://ergast.com/api/f1/2013/driverStandings.json";
-            $.get(url, (data) => {
-               
-                this.setState({ driversState: data.MRData.StandingsTable.StandingsLists[0].DriverStandings});
-            });
-    
-        }
+        var url = "http://ergast.com/api/f1/2013/driverStandings.json";
+        $.get(url, (data) => {
 
+            this.setState({ driversState: data.MRData.StandingsTable.StandingsLists[0].DriverStandings });
+        });
+
+    }
+    driverDetails() {
+
+        
+        console.log("from driverDetails");
+    }
 
     render() {
-        // console.log(this.state.driversState);
-       
+
         return (
-            <div>
+            <div className="mainScreen">
                 <table>
                     <thead>
                         <tr>
@@ -50,23 +59,23 @@ export default class Drivers extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.driversState.map((item, i) => {
-                            return(
+                            return (
                                 <tr key={i}>
                                     <td>{item.position}</td>
-                                    <td>{item.Driver.givenName + " " + item.Driver. familyName}</td>
+                                    <td onClick={this.driverDetails}>{item.Driver.givenName + " " + item.Driver.familyName}</td>
                                     <td>{item.Constructors[0].name}</td>
                                     <td>{item.points}</td>
                                 </tr>
-                            )
+                    )
                         })
-                            
+
                         }
-                        
+
                     </tbody>
                 </table>
 
 
-            </div>
+            </div >
         )
     }
 }

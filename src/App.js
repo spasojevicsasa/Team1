@@ -5,31 +5,12 @@ import Home from "./navigation/Home";
 import Drivers from "./navigation/Drivers";
 import Races from "./navigation/Races";
 import Teames from "./navigation/Teams";
-// import * as $ from "jquery";
+
 
 
 
 export default class App extends React.Component{
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         driversState: {}
-    //     }
-    // }
-    // componentDidMount(){
-    //     this.getPosts();
-    // }
-
-
-    // getPosts(){
-    //     var url ="http://ergast.com/api/f1/2013/driverStandings.json";
-    //     $.get(url, (data) =>{
-    //         console.log(data);
-    //         this.setState({driversState: data});
-    //     });
-
-    // }
-   
+    
     render(){
 
         return(
