@@ -10,18 +10,10 @@ module.exports = {
                 }
             },
             {
-<<<<<<< HEAD
                 test: /\.(css)$/,
                 use: [{
                     loader: "style-loader"
                 }, {
-=======
-                test:/\.(css)$/,
-                use: [{
-                    loader: "style-loader",
-                },
-                {
->>>>>>> 5553f6fff682143898d941ac3bdb93212c159cf4
                     loader: "css-loader"
                 }]
             },
@@ -29,20 +21,12 @@ module.exports = {
                 test: /\.(scss)$/,
                 use: [{
                     loader: "style-loader",
-<<<<<<< HEAD
                 }, {
                     loader: "css-loader",
                 },{
                     loader: "sass-loader"
                 }]
 
-=======
-                },{
-                    loader: "css-loader",
-                },{
-                    loader: "sass-loader" 
-                }] 
->>>>>>> 5553f6fff682143898d941ac3bdb93212c159cf4
             }
         ]
     },
@@ -53,8 +37,4 @@ module.exports = {
             filename: "./index.html"
         })
     ]
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 5553f6fff682143898d941ac3bdb93212c159cf4
