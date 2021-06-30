@@ -1,13 +1,13 @@
 import React from "react";
 import * as $ from "jquery";
-import { timers } from "jquery";
+
 
 export default class Drivers extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            driversState: [],
+            driversState: []
 
         }
 
